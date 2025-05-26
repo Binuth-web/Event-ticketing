@@ -1,0 +1,45 @@
+﻿<Page x:Class="sample2.pages.dashboard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="dashboard">
+
+    <DockPanel>
+        <!-- Sidebar with all buttons visible, visibility controlled by code -->
+        <StackPanel DockPanel.Dock="Left" Width="250" Background="#2C3E50">
+            <TextBlock x:Name="txtRoleHeader" FontSize="18" FontWeight="Bold" Foreground="White"
+                       Margin="10" TextWrapping="Wrap" Text="Logged in as: " />
+            <Separator Margin="0,5"/>
+
+            <!-- Customer Options -->
+            <Button x:Name="btnRegister" Content="Register for Events" Click="MenuButton_Click" Visibility="Collapsed"/>
+            <Button x:Name="btnSearch" Content="Search Events" Click="MenuButton_Click" Visibility="Collapsed"/>
+            <Button x:Name="btnManageTickets" Content="Manage Ticket Types" Click="MenuButton_Click" Visibility="Collapsed"/>
+            <Button x:Name="btnPurchase" Content="Purchase Tickets" Click="MenuButton_Click" Visibility="Collapsed"/>
+            <Button x:Name="btnView" Content="View Purchased Tickets" Click="MenuButton_Click" Visibility="Collapsed"/>
+            <Button x:Name="btnCancel" Content="Cancel Tickets" Click="MenuButton_Click" Visibility="Collapsed"/>
+            <Button x:Name="btnPayments" Content="Payments" Click="MenuButton_Click" Visibility="Collapsed"/>
+
+            <!-- Admin Options -->
+            <Button x:Name="btnManageUsers" Content="Manage Users" Click="MenuButton_Click" Visibility="Collapsed"/>
+            <Button x:Name="btnReports" Content="Generate Reports" Click="MenuButton_Click" Visibility="Collapsed"/>
+            <Button x:Name="btnTrackSales" Content="Track Ticket Sales" Click="MenuButton_Click" Visibility="Collapsed"/>
+
+            <!-- Organizer Options -->
+            <Button x:Name="btnCreateEvent" Content="Create/Edit/Delete Event" Click="MenuButton_Click" Visibility="Collapsed"/>
+            <Button x:Name="btnSetPrices" Content="Set Ticket Types and Prices" Click="MenuButton_Click" Visibility="Collapsed"/>
+            <Button x:Name="btnAvailability" Content="Manage Availability" Click="MenuButton_Click" Visibility="Collapsed"/>
+            <Button x:Name="btnOverbooking" Content="Handle Overbooking" Click="MenuButton_Click" Visibility="Collapsed"/>
+
+            <!-- Support Staff -->
+            <Button x:Name="btnSupport" Content="Resolve Customer Issues" Click="MenuButton_Click" Visibility="Collapsed"/>
+
+            <!-- Venue Manager -->
+            <Button x:Name="btnAllocate" Content="Allocate Seats" Click="MenuButton_Click" Visibility="Collapsed"/>
+            <Button x:Name="btnVenueDetails" Content="Manage Venue Details" Click="MenuButton_Click" Visibility="Collapsed"/>
+        </StackPanel>
+
+        <!-- Main Frame -->
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
+    </DockPanel>
+</Page>
+
